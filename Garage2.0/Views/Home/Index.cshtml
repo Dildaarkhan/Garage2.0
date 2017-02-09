@@ -2,30 +2,40 @@
     ViewBag.Title = "Home Page";
 }
 
-<div class="jumbotron">
-    
-    <p>Welcome to Pick-Drop Garage</p>
+<section class="container-fluid">
+    <div class="main-image">
 
-</div>
+        <img class="mainpic" src="~/images/main.jpg" />
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
+    </div>
+</section>
+<div class="row body-text">
+    <div class="col-md-6">
+        <h2>Green Garag</h2>
         <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
+            We are providing a very Green Environment for our Customers they Can Come and park the car and support the world's best Green Garag.
+            We are providing a very Green Environment for our Customers they Can Come and park the car and support the world's best Green Garag.
+            We are providing a very Green Environment for our Customers they Can Come and park the car and support the world's best Green Garag.
+            We are providing a very Green Environment for our Customers they Can Come and park the car and support the world's best Green Garag.
+            We are providing a very Green Environment for our Customers they Can Come and park the car and support the world's best Green Garag.
         </p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+                
     </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+    <div class="col-md-6">
+        <ul>
+            <li>
+                @*@Html.ActionLink("Park Your Car Here", "Create", "Vehicles")*@
+                <img src="~/images/parking.gif" height="50" width="50" /> @Html.ActionLink("Park Your Car Here", "Create","Vehicles")
+            </li>
+            <li>
+                @*@Html.ActionLink("Park Your Car Here", "Delete", "Vehicles")*@
+                <img src="~/images/parking.gif" height="50" width="50" /> @Html.ActionLink("Pick Your Car from Garage", "Find", "Vehicles")
+            </li>
+                
+
+        </ul>
     </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-    </div>
+    
+
+    
 </div>

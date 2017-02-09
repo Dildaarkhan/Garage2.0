@@ -172,7 +172,18 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="images\9331.5.45pil.jpg" />
+    <Content Include="images\ballet valet parking garage miami crop.jpg" />
+    <Content Include="images\download.png" />
+    <Content Include="images\e69ce231290da9008bf4b5efbce03ac6.jpg" />
     <Content Include="images\FKG-Group-Website-Website-Banners-V10027-Toowoomba-PCYC-Car-Park-1600x325.jpg" />
+    <Content Include="images\green-wrapped-building5.jpg" />
+    <Content Include="images\greenParking.jpg" />
+    <Content Include="images\GreenWallUCSJ01.JPG" />
+    <Content Include="images\main.jpg" />
+    <Content Include="images\parking-garage-with-real-plants-930x620.jpg" />
+    <Content Include="images\parking.gif" />
+    <Content Include="images\vnks_1.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
@@ -209,6 +220,8 @@
     <Content Include="Views\Vehicles\Details.cshtml" />
     <Content Include="Views\Vehicles\Edit.cshtml" />
     <Content Include="Views\Vehicles\Index.cshtml" />
+    <Content Include="Views\Vehicles\Find.cshtml" />
+    <Content Include="Views\Vehicles\Search.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

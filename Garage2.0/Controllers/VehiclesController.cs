@@ -116,6 +116,31 @@ namespace Garage2._0.Controllers
             return RedirectToAction("Index");
         }
 
+
+        public ActionResult Find()
+        {
+            return View();
+        }
+
+
+        [HttpPost]
+        public ActionResult Search(string id)
+        {
+
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Vehicle vehicle = db.Vehicles.Find(id);
+            if (vehicle == null)
+            {
+                return HttpNotFound();
+            }
+            return View(vehicle);
+        }
+
+
+
         protected override void Dispose(bool disposing)
         {
             if (disposing)
