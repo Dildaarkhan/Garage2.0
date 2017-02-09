@@ -1,6 +1,7 @@
 ﻿body {
-    padding-top: 50px;
+    padding-top: 70px;
     padding-bottom: 20px;
+    background-color: #d8f3d8;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -23,16 +24,22 @@ textarea {
     max-width: 280px;
 }
 .navbar{
-    background-color:dimgray;
+    background-color:seagreen;
     height:100px;
 }
 .navbar-inverse .navbar-brand{
-
-    color:black;
+    
+    font-family: 'Monoton', cursive;
+    font-size:40px;
+    color:white;
 }
 .navbar-inverse .navbar-nav>li>a{
     color:black;
 }
 .navbar-nav{
     float:right;
+}
+.navbar-form .form-control{
+
+    background-color:lightgreen;
 }
