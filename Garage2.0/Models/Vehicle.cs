@@ -10,6 +10,8 @@ namespace Garage2._0.Models
     public class Vehicle
     {
         [Key]
+        public int VehicleId { get; set; }
+
         [DisplayName("Registration Number")]
         [Required(ErrorMessage ="Required")]
         [RegularExpression(@"^[a-zA-Z]{3,10}[0-9]{3,10}$", ErrorMessage = "error Message ")]
@@ -30,6 +32,11 @@ namespace Garage2._0.Models
 
         [DisplayName("Vehicle Type")]
         public VehicleType VehicleType { get; set; }
+
+        [DisplayName("Parking Time")]
+        public DateTime ParkingTime { get; set; }
+
+        
     }
     public enum VehicleType
     {

@@ -1,13 +1,12 @@
 ﻿@model IEnumerable<Garage2._0.Models.Vehicle>
 
-@{
-    ViewBag.Title = "Index";
-}
 
-<h2>Index</h2>
+
+<h2>@ViewBag.Title</h2>
+
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Park", "Create")
 </p>
 <table class="table">
     <tr>
@@ -54,9 +53,9 @@
             @Html.DisplayFor(modelItem => item.VehicleType)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.RegistrationNumber }) |
-            @Html.ActionLink("Details", "Details", new { id=item.RegistrationNumber }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.RegistrationNumber })
+            @Html.ActionLink("Edit", "Edit", new { id=item.VehicleId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.VehicleId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.VehicleId })
         </td>
     </tr>
 }

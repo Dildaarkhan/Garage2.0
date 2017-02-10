@@ -18,11 +18,12 @@ namespace Garage2._0.Controllers
         // GET: Vehicles
         public ActionResult Index()
         {
+            ViewBag.Title = "We Can Care of You";
             return View(db.Vehicles.ToList());
         }
 
         // GET: Vehicles/Details/5
-        public ActionResult Details(string id)
+        public ActionResult Details(int? id)
         {
             if (id == null)
             {
@@ -47,7 +48,7 @@ namespace Garage2._0.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "RegistrationNumber,Color,Mark,Model,NumberOfWheels,VehicleType")] Vehicle vehicle)
+        public ActionResult Create([Bind(Include = "VehicleId,RegistrationNumber,Color,Mark,Model,NumberOfWheels,VehicleType")] Vehicle vehicle)
         {
             if (ModelState.IsValid)
             {
@@ -60,7 +61,7 @@ namespace Garage2._0.Controllers
         }
 
         // GET: Vehicles/Edit/5
-        public ActionResult Edit(string id)
+        public ActionResult Edit(int? id)
         {
             if (id == null)
             {
@@ -79,7 +80,7 @@ namespace Garage2._0.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "RegistrationNumber,Color,Mark,Model,NumberOfWheels,VehicleType")] Vehicle vehicle)
+        public ActionResult Edit([Bind(Include = "VehicleId,RegistrationNumber,Color,Mark,Model,NumberOfWheels,VehicleType")] Vehicle vehicle)
         {
             if (ModelState.IsValid)
             {
@@ -91,7 +92,7 @@ namespace Garage2._0.Controllers
         }
 
         // GET: Vehicles/Delete/5
-        public ActionResult Delete(string id)
+        public ActionResult Delete(int? id)
         {
             if (id == null)
             {
@@ -108,7 +109,7 @@ namespace Garage2._0.Controllers
         // POST: Vehicles/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(string id)
+        public ActionResult DeleteConfirmed(int? id)
         {
             Vehicle vehicle = db.Vehicles.Find(id);
             db.Vehicles.Remove(vehicle);
@@ -117,26 +118,31 @@ namespace Garage2._0.Controllers
         }
 
 
-        public ActionResult Find()
+        public ActionResult Find( )
         {
             return View();
         }
 
 
         [HttpPost]
-        public ActionResult Search(string id)
+        public ActionResult Search(string Id)
         {
 
-            if (id == null)
+            if (Id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Vehicle vehicle = db.Vehicles.Find(id);
-            if (vehicle == null)
+            var model =  from m in db.Vehicles
+                        where m.RegistrationNumber==Id
+                        select m;
+            
+            
+            if (model == null)
             {
                 return HttpNotFound();
             }
-            return View(vehicle);
+
+            return View(model.ToList());
         }
 
 
