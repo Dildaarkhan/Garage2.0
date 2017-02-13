@@ -28,6 +28,9 @@
         <th>
             @Html.DisplayNameFor(model => model.VehicleType)
         </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ParkingTime)
+        </th>
         <th></th>
     </tr>
 
@@ -53,10 +56,13 @@
             @Html.DisplayFor(modelItem => item.VehicleType)
         </td>
         <td>
+            @Html.DisplayFor(modelItem => item.ParkingTime)
+        </td>
+        @*<td>
             @Html.ActionLink("Edit", "Edit", new { id=item.VehicleId }) |
             @Html.ActionLink("Details", "Details", new { id=item.VehicleId }) |
             @Html.ActionLink("Delete", "Delete", new { id=item.VehicleId })
-        </td>
+        </td>*@
     </tr>
 }
 
